@@ -1,0 +1,17 @@
+- title: "Paper Title 1"
+  authors: "Choi H, Author B, Author C"
+  journal: "Journal Name"
+  year: 2025
+  url: "https://doi.org/10.1000/example1"
+
+- title: "Paper Title 2"
+  authors: "Author A, Choi H, Author C"
+  journal: "Another Journal"
+  year: 2024
+  url: "https://pubmed.ncbi.nlm.nih.gov/12345678/"
+
+- title: "Paper Title 3"
+  authors: "Choi H, Author D"
+  journal: "Example Journal"
+  year: 2023
+  url: "https://doi.org/10.1000/example3"

@@ -1,11 +1,249 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>My Homepage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Researcher Profile</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+    a { color: #0f766e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container {
+      width: min(1000px, 92%);
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #0f766e, #134e4a);
+      color: white;
+      padding: 64px 0 48px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: bold;
+      border: 4px solid rgba(255,255,255,0.3);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2.5rem;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      margin-bottom: 14px;
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    .btn-primary {
+      background: white;
+      color: #134e4a;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+    main {
+      padding: 36px 0 56px;
+    }
+    section {
+      background: white;
+      margin-bottom: 20px;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #0f172a;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+    }
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .tag {
+      background: #ecfeff;
+      color: #155e75;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+    }
+    ul {
+      padding-left: 18px;
+      margin-bottom: 0;
+    }
+    .pub-item {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .pub-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    footer {
+      text-align: center;
+      color: #64748b;
+      padding: 24px 0 40px;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 760px) {
+      .hero,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .profile-img {
+        margin: 0 auto;
+      }
+      header {
+        text-align: center;
+      }
+      .hero-buttons {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello 👋</h1>
-  <p>This is my GitHub homepage.</p>
+  <header>
+    <div class="container hero">
+      <div class="profile-img">HC</div>
+      <div>
+        <h1>Eun Seok Choi</h1>
+        <div class="subtitle">Postdoctoral Researcher | Molecular Biology | Neurodegenerative Disease</div>
+        <p>
+          I study the molecular mechanisms underlying neurodegenerative diseases,
+          with a focus on small non-coding RNAs, neuroinflammation, and biomarker discovery.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#contact">Contact</a>
+          <a class="btn btn-secondary" href="#publications">Publications</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a postdoctoral researcher interested in the molecular and cellular basis of
+        neurodegenerative diseases, including Alzheimer's disease and related disorders.
+        My research integrates transcriptomics, small RNA biology, and human cell-based models
+        to identify disease mechanisms and clinically relevant biomarkers.
+      </p>
+    </section>
+
+    <div class="grid-2">
+      <section>
+        <h2>Research Interests</h2>
+        <div class="tag-list">
+          <span class="tag">Alzheimer's disease</span>
+          <span class="tag">small non-coding RNA</span>
+          <span class="tag">tRNA-derived fragments (tRFs)</span>
+          <span class="tag">neuroinflammation</span>
+          <span class="tag">biomarker discovery</span>
+          <span class="tag">human cell models</span>
+          <span class="tag">transcriptomics</span>
+          <span class="tag">cancer biology</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Current Focus</h2>
+        <ul>
+          <li>Neurodegeneration-associated RNA signatures</li>
+          <li>tRF function in disease mechanisms</li>
+          <li>Microglia, neuron, and astrocyte models</li>
+          <li>Translational biomarker development</li>
+        </ul>
+      </section>
+    </div>
+
+    <section id="publications">
+      <h2>Selected Publications</h2>
+
+      <div class="pub-item">
+        <strong>Publication Title 1</strong><br />
+        Author A, <strong>Heeyoung Cho</strong>, Author C.<br />
+        <em>Journal Name</em> (Year)
+      </div>
+
+      <div class="pub-item">
+        <strong>Publication Title 2</strong><br />
+        <strong>Heeyoung Cho</strong>, Author B, Author C.<br />
+        <em>Journal Name</em> (Year)
+      </div>
+
+      <div class="pub-item">
+        <strong>Publication Title 3</strong><br />
+        Author A, Author B, <strong>Heeyoung Cho</strong>.<br />
+        <em>Journal Name</em> (Year)
+      </div>
+    </section>
+
+    <div class="grid-2">
+      <section>
+        <h2>Methods & Skills</h2>
+        <ul>
+          <li>RNA-seq and small RNA-seq analysis</li>
+          <li>qPCR and molecular cloning</li>
+          <li>Human iPSC-derived disease models</li>
+          <li>Bioinformatics and data visualization</li>
+          <li>Grant writing and scientific communication</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: eunchoi@utmb.edu</p>
+        <p>GitHub: <a href="#">github.com/yourusername</a></p>
+        <p>Google Scholar: <a href="#">https://scholar.google.com/citations?user=lw6pP4kAAAAJ&hl=ko</a></p>
+        <p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Eun Seok Choi. All rights reserved.
+  </footer>
 </body>
 </html>

@@ -1,0 +1,67 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .pub-item {
+      background: white;
+      padding: 18px 20px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      margin-bottom: 18px;
+    }
+    .pub-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .pub-meta {
+      margin-bottom: 6px;
+    }
+    a {
+      color: #0f766e;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .top-link {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+  <a class="top-link" href="index.html">← Back to Home</a>
+  <h1>Publications</h1>
+
+  {% for pub in site.data.publications %}
+    <div class="pub-item">
+      <div class="pub-title">{{ pub.title }}</div>
+      <div class="pub-meta">{{ pub.authors }}</div>
+      <div class="pub-meta"><em>{{ pub.journal }}</em> ({{ pub.year }})</div>
+      {% if pub.url %}
+        <div><a href="{{ pub.url }}" target="_blank">View article</a></div>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+</body>
+</html>
